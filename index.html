@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repeats</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: #99a19c;
+            color: #fff;
+        }
+
+        #navbar {
+            height: 50vh;
+            background: #444;
+
+        }
+
+        #container {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content:left; */
+            padding: 1rem;
+            height: 50vh;
+            
+        }
+
+        li {
+            padding: 1rem;
+            flex: 1;
+            text-align: center;
+            flex-basis: 10rem;
+
+        }
+
+        li a {
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            border-radius: 1.2rem;
+            background: #64aa7f;
+            display: block;
+        }
+
+        li a:hover {
+            color: inherit;
+            background: #3ad676;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="container">
+                <li><a href="bef_aft.html" target="_blank">Before & after</a></li>
+                <li><a href="box_shadows.html" target="_blank">Box Shadows</a></li>
+                <li><a href="media_queries.html" target="_blank">MQ</a></li>
+                <li><a href="vh_vw.html" target="_blank">Vh & Vw</a></li>
+                <li><a href="" target="_blank">?</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
