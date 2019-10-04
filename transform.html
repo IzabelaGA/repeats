@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #333;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(218, 115, 31);
+            transition: ease left 2s, ease top 2s 2s, width 4s 0s, height 4s 0s;
+            /* transform: rotate(25deg); */
+            /* transform: skew(25deg); */
+            /* transform: scale(2); */
+
+        }
+
+        .box:hover {
+            /* transform: rotate(180deg); */
+            /* transform: skew(25deg); */
+            transform: scale(2);
+            /* transform: translatey(-100px) ; */
+            /* transform: translatex(100px) ; */
+            /* transform: translate(100px, 100px) ; */
+
+        }
+
+        button {
+            position: absolute;
+            top: 40px;
+            left: calc(50vw - 60px);
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px 0;
+            width: 120px;
+            font-size: 20px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            color: white;
+            background-color: #000;
+        }
+
+
+
+        button:hover+.box {
+            top: calc(100% - 100px);
+            left: calc(100% - 100px);
+            width: 100px;
+            height: 100px;
+        }
+
+        button:focus+.box {
+            background-color: #0f0
+        }
+
+        .box p {
+            position: absolute;
+            top: calc(50% - 8px);
+            left: calc(50% - 25px);
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+        }
+
+        button:active+.box p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Hola! Que tal?</button>
+    <div class="box">
+        <p>Bien!:)</p>
+    </div>
+</body>
+
+</html>
